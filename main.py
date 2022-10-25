@@ -23,9 +23,12 @@ limparTela()
 
 converteAsterisco = tamanhoPalavra * "*"
 print(converteAsterisco)
+erro=0
+letrasUsadas=[]
 
 while True:
     print("{}, qual opção deseja realizar?" .format(competidor))
     print("> Digite 1 para solicitar uma dica!")
     print("> Digite 2 para chutar uma letra!")
     escolha = input()
+   
