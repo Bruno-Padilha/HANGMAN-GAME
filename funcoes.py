@@ -7,5 +7,3 @@ def lerPalavra(tamanho):
     tamanhoPalavra = len(tamanho)
     return tamanhoPalavra
 
-def contadorErros(erro):
-    erro==erro+1

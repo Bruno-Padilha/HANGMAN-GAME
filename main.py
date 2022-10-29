@@ -1,4 +1,4 @@
-from funcoes import limparTela, lerPalavra, contadorErros
+from funcoes import limparTela, lerPalavra
 
 competidor=input("Insira o nome do competidor:")
 desafiante=input("insira o nome do desafiante:")
@@ -26,9 +26,14 @@ print(converteAsterisco)
 
 letrasUsadas=[]
 jogar=True
+erros=0
+numletras = []
+
+
+
 
 while jogar:
-    erros=0
+    errosContador=erros+1
     print("{}, qual opção deseja realizar?" .format(competidor))
     print("> Digite 1 para solicitar uma dica!")
     print("> Digite 2 para chutar uma letra!")
@@ -43,9 +48,23 @@ while jogar:
                     for i in range(len(palavra)):
                         if palavra[i] == letra:
                            print("VOCE ACERTOU A LETRA")
+                           numletras.append(letra)
+                    if numletras==palavra:
+                        print("VITORIA DO JOGADOR!!!")
                            
        else:
-        contadorErros
-        print ("VOCE TEM:",erros,"erros")
+        errosContador
+        print ("VOCE TEM:",errosContador,"erros")
+        erros=errosContador
+        if errosContador==5:
+            print("O COMPETIDOR NAO TEM MAIS TENTATIVAS! \n",  "VITORIA DO DESAFIANTE, MEUS PARABENS!!!!")
+            print( "FIM DE JOGO, OBRIGADO POR JOGAR!!!")
+            break
     else:
         print(dica1)
+   
+   
+        
+   
+   
+        
